@@ -1,0 +1,7 @@
+{
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "total_count": 10000,
+    "parse_success_count": 8223,
+    "response_acc": 0.3383193481697677,
+    "cot_response_acc": 0.3803964489845555
+}
