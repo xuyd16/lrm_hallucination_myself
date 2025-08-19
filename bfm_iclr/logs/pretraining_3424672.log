@@ -1,0 +1,463 @@
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+DDP初始化成功: rank=0, local_rank=0, world_size=16
+使用设备: cuda:0
+可用GPU数量: 4
+  GPU 0: NVIDIA H100
+    显存: 93.1 GB
+  GPU 1: NVIDIA H100
+    显存: 93.1 GB
+  GPU 2: NVIDIA H100
+    显存: 93.1 GB
+  GPU 3: NVIDIA H100
+    显存: 93.1 GB
+
+=== 模型配置信息 ===
+num_regions: 5
+max_electrodes_per_region: 24
+sequence_length: 1600
+embed_dim: 768
+num_heads: 24
+depth: 24
+mlp_ratio: 4.0
+drop_rate: 0.2
+attn_drop_rate: 0.2
+drop_path_rate: 0.2
+use_abs_pos: False
+use_rel_pos: True
+use_time_embed: True
+mask_ratio: 0.15
+freq_mask_ratio: 0.3
+mask_strategy: random
+mask_noise_ratio: 0.005
+use_moe: True
+num_experts: 16
+top_k_experts: 2
+moe_aux_loss_coeff: 0.01
+n_freq_bands: 5
+freq_loss_weight: 0.1
+time_loss_weight: 0.9
+lr: 3e-05
+weight_decay: 0.0001
+warmup_epochs: 10
+use_amp: True
+clip_grad: 1.0
+batch_size: 4
+use_layer_norm: True
+use_batch_norm: True
+eps: 1e-08
+init_std: 0.02
+electrode_names: ['Fp1', 'Fp2', 'F3', 'F4', 'F7', 'F8', 'Fz', 'C3', 'C4', 'Cz', 'P3', 'P4', 'P7', 'P8', 'Pz', 'O1', 'O2', 'Oz', 'T3', 'T4', 'T5', 'T6']
+region_names: ['frontal', 'central', 'parietal', 'temporal', 'occipital']
+debug: False
+freq_eval: True
+use_channel_embed: True
+channel_embed_dim: 32
+num_brain_regions: 5
+channel_gat_initial_dim: 32
+intra_region_gat_heads: 4
+intra_region_gat_dim_per_head: 32
+region_agg_attention_dim: 64
+inter_region_gat_heads: 4
+inter_region_gat_dim_per_head: 64
+模型已创建并移动到设备: cuda:0
+模型已使用DDP封装在设备 0
+优化器已创建，学习率: 3e-05
+DDP训练，世界大小: 16, 有效批次大小: 64
+动态梯度累积设置:
+  目标全局批次大小: 128
+  当前全局批次大小: 64
+  梯度累积步数: 2
+  实际有效全局批次大小: 128
+训练器已创建
+
+============================================================
+                           模型参数统计                           
+============================================================
+总参数量:                1,892,973,456
+可训练参数:               1,892,973,456
+冻结参数:                0
+参数大小:                7221.12 MB (FP32)
+参数大小:                3610.56 MB (FP16)
+
+------------------------------------------------------------
+                          主要模块参数分布                          
+------------------------------------------------------------
+region_projection.raw_projection.0        2,459,136 (  0.1%)
+fusion_module.mlp_t.0                     2,362,368 (  0.1%)
+fusion_module.mlp_f.0                     2,362,368 (  0.1%)
+layers.0.mlp.experts.0.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.1.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.2.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.3.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.4.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.5.0                  2,362,368 (  0.1%)
+layers.0.mlp.experts.6.0                  2,362,368 (  0.1%)
+其他模块                                     1,865,708,682 ( 98.6%)
+============================================================
+
+正在加载数据: /hkfs/work/workspace/scratch/tum_fmp0582-ictspace/processed_data2
+检测到合并文件 BCI_Competition_IV-1_data.h5，包含 7 个数据集
+检测到合并文件 Emobrain_data_data.h5，包含 15 个数据集
+检测到合并文件 REEG-BACA_data.h5，包含 3264 个数据集
+检测到合并文件 Raw_EEG_Data_data.h5，包含 20 个数据集
+检测到合并文件 Resting_State_EEG_Data_data.h5，包含 22 个数据集
+检测到合并文件 SEED-V_data.h5，包含 48 个数据集
+检测到合并文件 SEED_FRA_data.h5，包含 24 个数据集
+检测到合并文件 Siena_Scalp_EEG_Database_data.h5，包含 40 个数据集
+检测到合并文件 TDBrain_data.h5，包含 2518 个数据集
+检测到合并文件 TUAR_data.h5，包含 310 个数据集
+检测到合并文件 TUEP_data.h5，包含 2298 个数据集
+检测到合并文件 TUH1.h5，包含 6968 个数据集
+检测到合并文件 TUH10.h5，包含 6960 个数据集
+检测到合并文件 TUH2.h5，包含 6968 个数据集
+检测到合并文件 TUH3.h5，包含 6968 个数据集
+检测到合并文件 TUH4.h5，包含 6968 个数据集
+检测到合并文件 TUH5.h5，包含 6968 个数据集
+检测到合并文件 TUH6.h5，包含 6968 个数据集
+检测到合并文件 TUH7.h5，包含 6968 个数据集
+检测到合并文件 TUH8.h5，包含 6968 个数据集
+检测到合并文件 TUH9.h5，包含 6968 个数据集
+检测到合并文件 TUSL_data.h5，包含 88 个数据集
+检测到合并文件 TUSZ_data.h5，包含 7276 个数据集
+检测到合并文件 Workload_data.h5，包含 72 个数据集
+有效数据源: 85675, 来自 25 个文件, 跳过文件数量: 0
+数据集初始化完成: 共25个文件, 85675个数据源, 总样本数: 53235406
+警告: num_workers=24 可能过高，建议设置为16以下
+数据加载配置: num_workers=24, 服务器CPU核心充足
+数据加载器已创建: 样本数=53235406, 批次大小=4
+
+==================================================
+开始训练 DualDomain Neural Transformer MEM 模型
+共100个周期，批次大小:4
+==================================================
+
+学习率调度器已初始化，总训练epochs: 100, 每个epoch的步数: 831803
+总训练步数: 83180300
+学习率调度器设置成功
+警告: 未找到TensorBoard，将不会记录训练日志
+
+==================================================
+     DualDomain Neural Transformer MEM 模型训练开始     
+==================================================
+                     本次运行文件夹                      
+--------------------------------------------------
+运行文件夹:          checkpoint/20250815_191736
+最佳模型:           checkpoint/20250815_191736/best_model.pt
+最后模型:           checkpoint/20250815_191736/last_model.pt
+--------------------------------------------------
+                      模型参数统计                      
+--------------------------------------------------
+总参数量:           1,892,973,456
+可训练参数:          1,892,973,456
+冻结参数:           0
+内存占用(FP32):     7221.1 MB
+内存占用(FP16):     3610.6 MB
+
+                     主要组件参数分布                     
+--------------------------------------------------
+layers               1,870,424,064 ( 98.8%)
+fusion_module          15,357,696 (  0.8%)
+region_projection       4,606,470 (  0.2%)
+time_reconstruction_head1    1,230,400 (  0.1%)
+time_reconstruction_head2    1,230,400 (  0.1%)
+positional_embedding       92,160 (  0.0%)
+intra_region_pos_embedding       18,432 (  0.0%)
+freq_reconstruction_head1        3,845 (  0.0%)
+freq_reconstruction_head2        3,845 (  0.0%)
+region_embedding            3,840 (  0.0%)
+norm                        1,536 (  0.0%)
+
+                      训练配置信息                      
+--------------------------------------------------
+训练周期:           100
+批次大小:           4
+有效批次大小:         64
+设备:             cuda:0
+DDP世界大小:        16
+DDP模式:          启用
+学习率:            3e-05
+时域损失权重:         0.9
+频域损失权重:         0.1
+混合精度:           启用
+梯度累积步数:         2
+每个周期的步数:        831803
+==================================================
+
+
+Epoch 1/100
+--------------------------------------------------
+序列长度 (R*E): 120
+时域预测形状: torch.Size([4, 120, 1600]), 目标形状: torch.Size([4, 120, 1600])
+频域预测形状: torch.Size([4, 120, 5]), 目标形状: torch.Size([4, 120, 5])
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_slurm_1.py", line 879, in train
+[rank13]:     metrics = self.train_step(batch)
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_slurm_1.py", line 695, in train_step
+[rank13]:     raise e
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_slurm_1.py", line 565, in train_step
+[rank13]:     time_pred1, time_pred2, freq_pred1, freq_pred2, moe_aux_loss = self.model(
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+[rank13]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+[rank13]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/model_slurm_1.py", line 674, in forward
+[rank13]:     x_embedded, aux_loss = layer(
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/model_slurm_1.py", line 506, in forward
+[rank13]:     mlp_output, moe_aux_loss = self.mlp(x)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+[rank13]:     return self._call_impl(*args, **kwargs)
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+[rank13]:     return forward_call(*args, **kwargs)
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/model_slurm_1.py", line 367, in forward
+[rank13]:     if mask.any():
+[rank13]: RuntimeError: CUDA error: the launch timed out and was terminated
+[rank13]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank13]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+[rank13]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[rank13]: During handling of the above exception, another exception occurred:
+
+[rank13]: Traceback (most recent call last):
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_slurm_1.py", line 1317, in <module>
+[rank13]:     metrics = trainer.train(
+[rank13]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_slurm_1.py", line 905, in train
+[rank13]:     torch.cuda.empty_cache()
+[rank13]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/memory.py", line 162, in empty_cache
+[rank13]:     torch._C._cuda_emptyCache()
+[rank13]: RuntimeError: CUDA error: the launch timed out and was terminated
+[rank13]: CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[rank13]: For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+[rank13]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank13]:[W CUDAGuardImpl.h:118] Warning: CUDA warning: the launch timed out and was terminated (function destroyEvent)
+srun: error: hkn0919: task 13: Aborted (core dumped)
+[rank3]:[E ProcessGroupNCCL.cpp:563] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+[rank14]:[E ProcessGroupNCCL.cpp:563] [Rank 14] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600022 milliseconds before timing out.
+[rank15]:[E ProcessGroupNCCL.cpp:563] [Rank 15] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600035 milliseconds before timing out.
+[rank2]:[E ProcessGroupNCCL.cpp:563] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600024 milliseconds before timing out.
+[rank1]:[E ProcessGroupNCCL.cpp:563] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600042 milliseconds before timing out.
+[rank6]:[E ProcessGroupNCCL.cpp:563] [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600042 milliseconds before timing out.
+[rank0]:[E ProcessGroupNCCL.cpp:563] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600057 milliseconds before timing out.
+[rank11]:[E ProcessGroupNCCL.cpp:563] [Rank 11] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600065 milliseconds before timing out.
+[rank4]:[E ProcessGroupNCCL.cpp:563] [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600065 milliseconds before timing out.
+[rank8]:[E ProcessGroupNCCL.cpp:563] [Rank 8] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600074 milliseconds before timing out.
+[rank5]:[E ProcessGroupNCCL.cpp:563] [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600083 milliseconds before timing out.
+[rank12]:[E ProcessGroupNCCL.cpp:563] [Rank 12] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600098 milliseconds before timing out.
+[rank10]:[E ProcessGroupNCCL.cpp:563] [Rank 10] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600090 milliseconds before timing out.
+[rank7]:[E ProcessGroupNCCL.cpp:563] [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600099 milliseconds before timing out.
+[rank9]:[E ProcessGroupNCCL.cpp:563] [Rank 9] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600094 milliseconds before timing out.
+[rank3]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 3] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank3]:[E ProcessGroupNCCL.cpp:577] [Rank 3] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank3]:[E ProcessGroupNCCL.cpp:583] [Rank 3] To avoid data inconsistency, we are taking the entire process down.
+[rank1]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 1] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank1]:[E ProcessGroupNCCL.cpp:577] [Rank 1] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank1]:[E ProcessGroupNCCL.cpp:583] [Rank 1] To avoid data inconsistency, we are taking the entire process down.
+[rank2]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 2] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank2]:[E ProcessGroupNCCL.cpp:577] [Rank 2] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank2]:[E ProcessGroupNCCL.cpp:583] [Rank 2] To avoid data inconsistency, we are taking the entire process down.
+[rank0]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 0] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank0]:[E ProcessGroupNCCL.cpp:577] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E ProcessGroupNCCL.cpp:583] [Rank 0] To avoid data inconsistency, we are taking the entire process down.
+[rank0]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600057 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1471e2108897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x1471e33d3d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x1471e33d8b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x1471e33d9e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14724396ebf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x147258e89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x147258f0ec60 in /lib64/libc.so.6)
+
+[rank1]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 1] Process group watchdog thread terminated with exception: [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600042 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1553dc0e1897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x1553dd3acd12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x1553dd3b1b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x1553dd3b2e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x15543d947bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x155452e89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x155452f0ec60 in /lib64/libc.so.6)
+
+[rank2]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600024 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14999210e897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x1499933d9d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x1499933deb30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x1499933dfe7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x1499f3974bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x149a08e89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x149a08f0ec60 in /lib64/libc.so.6)
+
+[rank3]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 3] Process group watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14650db99897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14650ee64d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14650ee69b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14650ee6ae7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14656f3ffbf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x146584889c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14658490ec60 in /lib64/libc.so.6)
+
+训练进度: [=                   ] 1/831803 | 总损失: 0.36933658 | 时域: 0.77440387 | 频域: 4.15510130 | LR: 0.00000060 | 用时: 14.0秒训练进度: [=                   ] 41591/831803 | 总损失: 0.09767155 | 时域: 0.11589779 | 频域: 1.26067340 | LR: 0.00000060 | 用时: 37209.9秒[rank4]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 4] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank4]:[E ProcessGroupNCCL.cpp:577] [Rank 4] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank4]:[E ProcessGroupNCCL.cpp:583] [Rank 4] To avoid data inconsistency, we are taking the entire process down.
+[rank4]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 4] Process group watchdog thread terminated with exception: [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600065 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x150e2db11897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x150e2eddcd12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x150e2ede1b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x150e2ede2e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x150e8f377bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x150ea4889c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x150ea490ec60 in /lib64/libc.so.6)
+
+[rank6]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 6] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank6]:[E ProcessGroupNCCL.cpp:577] [Rank 6] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank6]:[E ProcessGroupNCCL.cpp:583] [Rank 6] To avoid data inconsistency, we are taking the entire process down.
+[rank6]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 6] Process group watchdog thread terminated with exception: [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600042 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x15361cf59897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x15361e224d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x15361e229b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x15361e22ae7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x15367e7bfbf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x153693c89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x153693d0ec60 in /lib64/libc.so.6)
+
+[rank5]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 5] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank5]:[E ProcessGroupNCCL.cpp:577] [Rank 5] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank5]:[E ProcessGroupNCCL.cpp:583] [Rank 5] To avoid data inconsistency, we are taking the entire process down.
+[rank5]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 5] Process group watchdog thread terminated with exception: [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600083 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1524ebb30897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x1524ecdfbd12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x1524ece00b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x1524ece01e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x15254d396bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x152562889c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x15256290ec60 in /lib64/libc.so.6)
+
+[rank7]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 7] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank7]:[E ProcessGroupNCCL.cpp:577] [Rank 7] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank7]:[E ProcessGroupNCCL.cpp:583] [Rank 7] To avoid data inconsistency, we are taking the entire process down.
+[rank7]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 7] Process group watchdog thread terminated with exception: [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600099 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14874ae0e897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14874c0d9d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14874c0deb30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14874c0dfe7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x1487ac674bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x1487c1a89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x1487c1b0ec60 in /lib64/libc.so.6)
+
+srun: error: hkn0906: tasks 0-3: Aborted (core dumped)
+[rank14]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 14] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank14]:[E ProcessGroupNCCL.cpp:577] [Rank 14] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank14]:[E ProcessGroupNCCL.cpp:583] [Rank 14] To avoid data inconsistency, we are taking the entire process down.
+[rank12]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 12] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank12]:[E ProcessGroupNCCL.cpp:577] [Rank 12] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank12]:[E ProcessGroupNCCL.cpp:583] [Rank 12] To avoid data inconsistency, we are taking the entire process down.
+[rank12]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 12] Process group watchdog thread terminated with exception: [Rank 12] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600098 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14fda7105897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14fda83d0d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14fda83d5b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14fda83d6e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14fe0896bbf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x14fe1de89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14fe1df0ec60 in /lib64/libc.so.6)
+
+[rank14]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 14] Process group watchdog thread terminated with exception: [Rank 14] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600022 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14b7d54bd897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14b7d6788d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14b7d678db30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14b7d678ee7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14b836d23bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x14b84c289c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14b84c30ec60 in /lib64/libc.so.6)
+
+[rank15]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 15] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank15]:[E ProcessGroupNCCL.cpp:577] [Rank 15] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank15]:[E ProcessGroupNCCL.cpp:583] [Rank 15] To avoid data inconsistency, we are taking the entire process down.
+[rank15]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 15] Process group watchdog thread terminated with exception: [Rank 15] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600035 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1506f53c3897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x1506f668ed12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x1506f6693b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x1506f6694e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x150756c29bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x15076c089c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x15076c10ec60 in /lib64/libc.so.6)
+
+[rank8]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 8] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank8]:[E ProcessGroupNCCL.cpp:577] [Rank 8] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank8]:[E ProcessGroupNCCL.cpp:583] [Rank 8] To avoid data inconsistency, we are taking the entire process down.
+[rank8]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 8] Process group watchdog thread terminated with exception: [Rank 8] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600074 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14c543611897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14c5448dcd12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14c5448e1b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14c5448e2e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14c5a4e77bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x14c5ba489c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14c5ba50ec60 in /lib64/libc.so.6)
+
+[rank9]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 9] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank10]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 10] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank10]:[E ProcessGroupNCCL.cpp:577] [Rank 10] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank10]:[E ProcessGroupNCCL.cpp:583] [Rank 10] To avoid data inconsistency, we are taking the entire process down.
+[rank9]:[E ProcessGroupNCCL.cpp:577] [Rank 9] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank9]:[E ProcessGroupNCCL.cpp:583] [Rank 9] To avoid data inconsistency, we are taking the entire process down.
+[rank10]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 10] Process group watchdog thread terminated with exception: [Rank 10] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600090 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x153a1417b897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x153a15446d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x153a1544bb30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x153a1544ce7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x153a759e1bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x153a8ae89c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x153a8af0ec60 in /lib64/libc.so.6)
+
+[rank9]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 9] Process group watchdog thread terminated with exception: [Rank 9] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600094 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14f1e0963897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14f1e1c2ed12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14f1e1c33b30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14f1e1c34e7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14f2421c9bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x14f257689c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14f25770ec60 in /lib64/libc.so.6)
+
+[rank11]:[E ProcessGroupNCCL.cpp:1537] [PG 0 Rank 11] Timeout at NCCL work: 20648251, last enqueued NCCL work: 20648520, last completed NCCL work: 20648250.
+[rank11]:[E ProcessGroupNCCL.cpp:577] [Rank 11] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank11]:[E ProcessGroupNCCL.cpp:583] [Rank 11] To avoid data inconsistency, we are taking the entire process down.
+[rank11]:[E ProcessGroupNCCL.cpp:1414] [PG 0 Rank 11] Process group watchdog thread terminated with exception: [Rank 11] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=20648251, OpType=ALLREDUCE, NumelIn=9290, NumelOut=9290, Timeout(ms)=600000) ran for 600065 milliseconds before timing out.
+Exception raised from checkTimeout at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:565 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14952833d897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x149529608d12 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1a0 (0x14952960db30 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14952960ee7c in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x149589ba3bf4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #5: <unknown function> + 0x89c0a (0x14959f089c0a in /lib64/libc.so.6)
+frame #6: <unknown function> + 0x10ec60 (0x14959f10ec60 in /lib64/libc.so.6)
+
+srun: error: hkn0907: tasks 4-7: Aborted (core dumped)
+srun: error: hkn0919: tasks 12,14-15: Aborted (core dumped)
+srun: error: hkn0913: tasks 8-11: Aborted (core dumped)

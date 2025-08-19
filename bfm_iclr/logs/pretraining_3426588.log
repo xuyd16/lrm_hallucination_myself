@@ -1,0 +1,701 @@
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+GpuFreq=control_disabled
+Traceback (most recent call last):
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+Traceback (most recent call last):
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+Traceback (most recent call last):
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+Traceback (most recent call last):
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+    rank, local_rank, world_size = setup_ddp()
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 52, in setup_ddp
+    torch.cuda.set_device(local_rank)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 399, in set_device
+    rank, local_rank, world_size = setup_ddp()
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 52, in setup_ddp
+    torch.cuda.set_device(local_rank)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 399, in set_device
+    rank, local_rank, world_size = setup_ddp()
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 52, in setup_ddp
+    torch.cuda.set_device(local_rank)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 399, in set_device
+    rank, local_rank, world_size = setup_ddp()
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 52, in setup_ddp
+    torch._C._cuda_setDevice(device)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_setDevice(device)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch.cuda.set_device(local_rank)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 399, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_setDevice(device)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/cuda/__init__.py", line 293, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero.
+    torch._C._cuda_init()
+RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero.
+    torch._C._cuda_init()
+RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero.
+    torch._C._cuda_init()
+RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero.
+srun: error: hkn0632: tasks 12-15: Exited with exit code 1
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank2]:     rank, local_rank, world_size = setup_ddp()
+[rank2]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank2]:     dist.barrier()
+[rank2]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank2]:     return func(*args, **kwargs)
+[rank2]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank2]:     work = default_pg.barrier(opts=opts)
+[rank2]: torch.distributed.DistBackendError: [2] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank2]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank2]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1537b92c5897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank2]: frame #1: <unknown function> + 0x12feb87 (0x15380e166b87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x153812629962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x15381262a9b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1538125ded51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1538125ded51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1538125ded51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x1537ba591239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank2]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x1537ba5986c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank2]: frame #9: <unknown function> + 0x11b1f10 (0x1537ba5a0f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank2]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x1537ba5a2290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank2]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x1537ba5b0dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank2]: frame #12: <unknown function> + 0x57692d2 (0x1538125d12d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #13: <unknown function> + 0x5773d00 (0x1538125dbd00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #14: <unknown function> + 0x5773e05 (0x1538125dbe05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #15: <unknown function> + 0x4db0e26 (0x153811c18e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #16: <unknown function> + 0x175be98 (0x15380e5c3e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #17: <unknown function> + 0x577e1b4 (0x1538125e61b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #18: <unknown function> + 0x577ef65 (0x1538125e6f65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank2]: frame #19: <unknown function> + 0xd236c8 (0x15381a5566c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank2]: frame #20: <unknown function> + 0x47e1ef (0x153819cb11ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank2]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank2]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank2]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank2]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank2]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank2]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank2]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank2]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank2]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank2]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank2]: frame #42: <unknown function> + 0x29590 (0x153830029590 in /lib64/libc.so.6)
+[rank2]: frame #43: __libc_start_main + 0x80 (0x153830029640 in /lib64/libc.so.6)
+[rank2]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank2]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank10]: Traceback (most recent call last):
+[rank10]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank10]:     rank, local_rank, world_size = setup_ddp()
+[rank10]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank10]:     dist.barrier()
+[rank10]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank10]:     return func(*args, **kwargs)
+[rank10]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank10]:     work = default_pg.barrier(opts=opts)
+[rank10]: torch.distributed.DistBackendError: [10] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank10]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank10]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x153c8130e897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank10]: frame #1: <unknown function> + 0x12feb87 (0x153cd61afb87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x153cda672962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x153cda6739b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x153cda627d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x153cda627d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x153cda627d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x153c825da239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank10]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x153c825e16c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank10]: frame #9: <unknown function> + 0x11b1f10 (0x153c825e9f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank10]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x153c825eb290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank10]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x153c825f9dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank10]: frame #12: <unknown function> + 0x57692d2 (0x153cda61a2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #13: <unknown function> + 0x5773d00 (0x153cda624d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #14: <unknown function> + 0x5773e05 (0x153cda624e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #15: <unknown function> + 0x4db0e26 (0x153cd9c61e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #16: <unknown function> + 0x175be98 (0x153cd660ce98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #17: <unknown function> + 0x577e1b4 (0x153cda62f1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #18: <unknown function> + 0x577ef65 (0x153cda62ff65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank10]: frame #19: <unknown function> + 0xd236c8 (0x153ce259f6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank10]: frame #20: <unknown function> + 0x47e1ef (0x153ce1cfa1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank10]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank10]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank10]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank10]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank10]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank10]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank10]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank10]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank10]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank10]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank10]: frame #42: <unknown function> + 0x29590 (0x153cf8029590 in /lib64/libc.so.6)
+[rank10]: frame #43: __libc_start_main + 0x80 (0x153cf8029640 in /lib64/libc.so.6)
+[rank10]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank10]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank6]:     rank, local_rank, world_size = setup_ddp()
+[rank6]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank6]:     dist.barrier()
+[rank6]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank6]:     return func(*args, **kwargs)
+[rank6]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank6]:     work = default_pg.barrier(opts=opts)
+[rank6]: torch.distributed.DistBackendError: [6] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank6]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank6]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14d00bd23897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank6]: frame #1: <unknown function> + 0x12feb87 (0x14d060bc4b87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x14d065087962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x14d0650889b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14d06503cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14d06503cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14d06503cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x14d00cfef239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank6]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x14d00cff66c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank6]: frame #9: <unknown function> + 0x11b1f10 (0x14d00cffef10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank6]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x14d00d000290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank6]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x14d00d00edda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank6]: frame #12: <unknown function> + 0x57692d2 (0x14d06502f2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #13: <unknown function> + 0x5773d00 (0x14d065039d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #14: <unknown function> + 0x5773e05 (0x14d065039e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #15: <unknown function> + 0x4db0e26 (0x14d064676e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #16: <unknown function> + 0x175be98 (0x14d061021e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #17: <unknown function> + 0x577e1b4 (0x14d0650441b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #18: <unknown function> + 0x577ef65 (0x14d065044f65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank6]: frame #19: <unknown function> + 0xd236c8 (0x14d06cfb46c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank6]: frame #20: <unknown function> + 0x47e1ef (0x14d06c70f1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank6]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank6]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank6]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank6]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank6]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank6]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank6]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank6]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank6]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank6]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank6]: frame #42: <unknown function> + 0x29590 (0x14d082a29590 in /lib64/libc.so.6)
+[rank6]: frame #43: __libc_start_main + 0x80 (0x14d082a29640 in /lib64/libc.so.6)
+[rank6]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank6]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank7]:     rank, local_rank, world_size = setup_ddp()
+[rank7]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank7]:     dist.barrier()
+[rank7]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank7]:     return func(*args, **kwargs)
+[rank7]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank7]:     work = default_pg.barrier(opts=opts)
+[rank7]: torch.distributed.DistBackendError: [7] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank7]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank7]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14f1e8319897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank7]: frame #1: <unknown function> + 0x12feb87 (0x14f23d1bab87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x14f24167d962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x14f24167e9b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14f241632d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14f241632d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14f241632d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x14f1e95e5239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank7]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x14f1e95ec6c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank7]: frame #9: <unknown function> + 0x11b1f10 (0x14f1e95f4f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank7]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x14f1e95f6290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank7]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x14f1e9604dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank7]: frame #12: <unknown function> + 0x57692d2 (0x14f2416252d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #13: <unknown function> + 0x5773d00 (0x14f24162fd00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #14: <unknown function> + 0x5773e05 (0x14f24162fe05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #15: <unknown function> + 0x4db0e26 (0x14f240c6ce26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #16: <unknown function> + 0x175be98 (0x14f23d617e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #17: <unknown function> + 0x577e1b4 (0x14f24163a1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #18: <unknown function> + 0x577ef65 (0x14f24163af65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank7]: frame #19: <unknown function> + 0xd236c8 (0x14f2495aa6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank7]: frame #20: <unknown function> + 0x47e1ef (0x14f248d051ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank7]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank7]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank7]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank7]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank7]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank7]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank7]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank7]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank7]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank7]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank7]: frame #42: <unknown function> + 0x29590 (0x14f25f029590 in /lib64/libc.so.6)
+[rank7]: frame #43: __libc_start_main + 0x80 (0x14f25f029640 in /lib64/libc.so.6)
+[rank7]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank7]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank5]:     rank, local_rank, world_size = setup_ddp()
+[rank5]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank5]:     dist.barrier()
+[rank5]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank5]:     return func(*args, **kwargs)
+[rank5]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank5]:     work = default_pg.barrier(opts=opts)
+[rank5]: torch.distributed.DistBackendError: [5] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank5]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank5]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14e48c98e897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank5]: frame #1: <unknown function> + 0x12feb87 (0x14e4e182fb87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x14e4e5cf2962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x14e4e5cf39b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14e4e5ca7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14e4e5ca7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14e4e5ca7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x14e48dc5a239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank5]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x14e48dc616c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank5]: frame #9: <unknown function> + 0x11b1f10 (0x14e48dc69f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank5]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x14e48dc6b290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank5]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x14e48dc79dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank5]: frame #12: <unknown function> + 0x57692d2 (0x14e4e5c9a2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #13: <unknown function> + 0x5773d00 (0x14e4e5ca4d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #14: <unknown function> + 0x5773e05 (0x14e4e5ca4e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #15: <unknown function> + 0x4db0e26 (0x14e4e52e1e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #16: <unknown function> + 0x175be98 (0x14e4e1c8ce98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #17: <unknown function> + 0x577e1b4 (0x14e4e5caf1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #18: <unknown function> + 0x577ef65 (0x14e4e5caff65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank5]: frame #19: <unknown function> + 0xd236c8 (0x14e4edc1f6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank5]: frame #20: <unknown function> + 0x47e1ef (0x14e4ed37a1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank5]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank5]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank5]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank5]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank5]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank5]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank5]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank5]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank5]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank5]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank5]: frame #42: <unknown function> + 0x29590 (0x14e503629590 in /lib64/libc.so.6)
+[rank5]: frame #43: __libc_start_main + 0x80 (0x14e503629640 in /lib64/libc.so.6)
+[rank5]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank5]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank4]:     rank, local_rank, world_size = setup_ddp()
+[rank4]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank4]:     dist.barrier()
+[rank4]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank4]:     return func(*args, **kwargs)
+[rank4]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank4]:     work = default_pg.barrier(opts=opts)
+[rank4]: torch.distributed.DistBackendError: [4] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+[rank4]: Exception raised from doWait at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/TCPStore.cpp:563 (most recent call first):
+[rank4]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x147e480d1897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank4]: frame #1: <unknown function> + 0x12feb87 (0x147e9cf72b87 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #2: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x147ea1435962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #3: c10d::TCPStore::get(std::string const&) + 0xa1 (0x147ea14369b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #4: c10d::PrefixStore::get(std::string const&) + 0x31 (0x147ea13ead51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x147ea13ead51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x147ea13ead51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #7: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x147e4939d239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank4]: frame #8: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x147e493a46c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank4]: frame #9: <unknown function> + 0x11b1f10 (0x147e493acf10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank4]: frame #10: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x147e493ae290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank4]: frame #11: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x147e493bcdda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank4]: frame #12: <unknown function> + 0x57692d2 (0x147ea13dd2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #13: <unknown function> + 0x5773d00 (0x147ea13e7d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #14: <unknown function> + 0x5773e05 (0x147ea13e7e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #15: <unknown function> + 0x4db0e26 (0x147ea0a24e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #16: <unknown function> + 0x175be98 (0x147e9d3cfe98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #17: <unknown function> + 0x577e1b4 (0x147ea13f21b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #18: <unknown function> + 0x577ef65 (0x147ea13f2f65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank4]: frame #19: <unknown function> + 0xd236c8 (0x147ea93626c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank4]: frame #20: <unknown function> + 0x47e1ef (0x147ea8abd1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank4]: frame #21: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank4]: frame #22: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #23: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank4]: frame #24: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #25: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank4]: frame #26: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #27: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank4]: frame #28: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #29: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #30: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank4]: frame #31: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #32: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank4]: frame #33: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #34: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #35: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #36: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank4]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank4]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank4]: frame #39: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #40: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #41: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank4]: frame #42: <unknown function> + 0x29590 (0x147ebee29590 in /lib64/libc.so.6)
+[rank4]: frame #43: __libc_start_main + 0x80 (0x147ebee29640 in /lib64/libc.so.6)
+[rank4]: frame #44: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank4]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+srun: error: hkn0627: task 10: Exited with exit code 1
+srun: error: hkn0428: task 2: Exited with exit code 1
+Traceback (most recent call last):
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+    rank, local_rank, world_size = setup_ddp()
+  File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 55, in setup_ddp
+    dist.init_process_group(
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 89, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 1305, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/rendezvous.py", line 199, in _tcp_rendezvous_handler
+    store = _create_c10d_store(result.hostname, result.port, rank, world_size, timeout, use_libuv)
+  File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/rendezvous.py", line 174, in _create_c10d_store
+    return TCPStore(
+torch.distributed.DistStoreError: Timed out after 601 seconds waiting for clients. 12/16 clients joined.
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank8]:     rank, local_rank, world_size = setup_ddp()
+[rank8]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank8]:     dist.barrier()
+[rank8]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank8]:     return func(*args, **kwargs)
+[rank8]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank8]:     work = default_pg.barrier(opts=opts)
+[rank8]: torch.distributed.DistBackendError: [8] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank1]:     rank, local_rank, world_size = setup_ddp()
+[rank1]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank1]:     dist.barrier()
+[rank1]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank1]:     work = default_pg.barrier(opts=opts)
+[rank1]: torch.distributed.DistBackendError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+[rank8]: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+[rank8]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x153732a7d897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank8]: frame #1: <unknown function> + 0x57c6c1e (0x15378bde6c1e in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x15378bde1667 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x15378bde1962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+[rank1]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1509ab603897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank1]: frame #1: <unknown function> + 0x57c6c1e (0x150a0496cc1e in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x150a04967667 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x150a04967962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x15378bde29b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15378bd96d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15378bd96d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15378bd96d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x150a049689b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x150a0491cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x150a0491cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x150a0491cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x153733d49239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank8]: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x153733d506c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank8]: frame #10: <unknown function> + 0x11b1f10 (0x153733d58f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank8]: frame #11: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x153733d5a290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x1509ac8cf239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x1509ac8d66c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #10: <unknown function> + 0x11b1f10 (0x1509ac8def10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #11: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x1509ac8e0290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #12: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x1509ac8eedda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank3]:     rank, local_rank, world_size = setup_ddp()
+[rank3]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank3]:     dist.barrier()
+[rank3]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank3]:     return func(*args, **kwargs)
+[rank3]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank3]:     work = default_pg.barrier(opts=opts)
+[rank3]: torch.distributed.DistBackendError: [3] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+[rank3]: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+[rank3]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14777f913897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank3]: frame #1: <unknown function> + 0x57c6c1e (0x1477d8c7cc1e in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x1477d8c77667 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x1477d8c77962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x1477d8c789b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1477d8c2cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1477d8c2cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x1477d8c2cd51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x147780bdf239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank3]: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x147780be66c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank3]: frame #10: <unknown function> + 0x11b1f10 (0x147780beef10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank3]: frame #11: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x147780bf0290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank3]: frame #12: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x147780bfedda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank1]: frame #13: <unknown function> + 0x57692d2 (0x150a0490f2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #14: <unknown function> + 0x5773d00 (0x150a04919d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #15: <unknown function> + 0x5773e05 (0x150a04919e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #16: <unknown function> + 0x4db0e26 (0x150a03f56e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #17: <unknown function> + 0x175be98 (0x150a00901e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #18: <unknown function> + 0x577e1b4 (0x150a049241b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #19: <unknown function> + 0x577ef65 (0x150a04924f65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank1]: frame #20: <unknown function> + 0xd236c8 (0x150a0c8946c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank1]: frame #21: <unknown function> + 0x47e1ef (0x150a0bfef1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank1]: frame #22: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank1]: frame #23: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #24: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank1]: frame #25: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #26: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank1]: frame #27: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #28: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank1]: frame #29: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #30: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #31: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank1]: frame #32: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #33: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank1]: frame #34: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #35: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #36: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank1]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank1]: frame #39: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank1]: frame #40: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #41: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #13: <unknown function> + 0x57692d2 (0x1477d8c1f2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #14: <unknown function> + 0x5773d00 (0x1477d8c29d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #15: <unknown function> + 0x5773e05 (0x1477d8c29e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #16: <unknown function> + 0x4db0e26 (0x1477d8266e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #17: <unknown function> + 0x175be98 (0x1477d4c11e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #18: <unknown function> + 0x577e1b4 (0x1477d8c341b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #19: <unknown function> + 0x577ef65 (0x1477d8c34f65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank3]: frame #20: <unknown function> + 0xd236c8 (0x1477e0ba46c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank3]: frame #21: <unknown function> + 0x47e1ef (0x1477e02ff1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank3]: frame #22: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank3]: frame #23: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #24: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank3]: frame #25: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #26: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank3]: frame #27: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #28: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank3]: frame #29: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #30: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #31: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank3]: frame #32: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #33: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank3]: frame #34: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #35: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #36: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank3]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank3]: frame #39: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank3]: frame #40: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #41: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #42: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank1]: frame #43: <unknown function> + 0x29590 (0x150a22229590 in /lib64/libc.so.6)
+[rank1]: frame #44: __libc_start_main + 0x80 (0x150a22229640 in /lib64/libc.so.6)
+[rank1]: frame #45: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank1]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank3]: frame #42: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank3]: frame #43: <unknown function> + 0x29590 (0x1477f6629590 in /lib64/libc.so.6)
+[rank3]: frame #44: __libc_start_main + 0x80 (0x1477f6629640 in /lib64/libc.so.6)
+[rank3]: frame #45: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank3]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank8]: frame #12: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x153733d68dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank8]: frame #13: <unknown function> + 0x57692d2 (0x15378bd892d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #14: <unknown function> + 0x5773d00 (0x15378bd93d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #15: <unknown function> + 0x5773e05 (0x15378bd93e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #16: <unknown function> + 0x4db0e26 (0x15378b3d0e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #17: <unknown function> + 0x175be98 (0x153787d7be98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #18: <unknown function> + 0x577e1b4 (0x15378bd9e1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #19: <unknown function> + 0x577ef65 (0x15378bd9ef65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank8]: frame #20: <unknown function> + 0xd236c8 (0x153793d0e6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank8]: frame #21: <unknown function> + 0x47e1ef (0x1537934691ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank8]: frame #22: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank8]: frame #23: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #24: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank8]: frame #25: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #26: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank8]: frame #27: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #28: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank8]: frame #29: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #30: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #31: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank8]: frame #32: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #33: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank8]: frame #34: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #35: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #36: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank8]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank8]: frame #39: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank8]: frame #40: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #41: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank9]:     rank, local_rank, world_size = setup_ddp()
+[rank9]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank9]:     dist.barrier()
+[rank9]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank9]:     return func(*args, **kwargs)
+[rank9]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank9]:     work = default_pg.barrier(opts=opts)
+[rank9]: torch.distributed.DistBackendError: [9] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+[rank9]: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+[rank9]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x154dda3ce897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank9]: frame #1: <unknown function> + 0x57c6c1e (0x154e33737c1e in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x154e33732667 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x154e33732962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x154e337339b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x154e336e7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x154e336e7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x154e336e7d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x154ddb69a239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank9]: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x154ddb6a16c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank9]: frame #10: <unknown function> + 0x11b1f10 (0x154ddb6a9f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank9]: frame #11: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x154ddb6ab290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank9]: frame #12: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x154ddb6b9dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank11]: Traceback (most recent call last):
+[rank11]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 1069, in <module>
+[rank11]:     rank, local_rank, world_size = setup_ddp()
+[rank11]:   File "/hkfs/home/project/hk-project-p0022560/tum_fmp0582/ict/bfm_iclr/train_H100.py", line 63, in setup_ddp
+[rank11]:     dist.barrier()
+[rank11]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/c10d_logger.py", line 75, in wrapper
+[rank11]:     return func(*args, **kwargs)
+[rank11]:   File "/home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 3683, in barrier
+[rank11]:     work = default_pg.barrier(opts=opts)
+[rank11]: torch.distributed.DistBackendError: [11] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+[rank11]: Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1716905971093/work/torch/csrc/distributed/c10d/Utils.hpp:672 (most recent call first):
+[rank11]: frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x1500429bb897 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libc10.so)
+[rank11]: frame #1: <unknown function> + 0x57c6c1e (0x15009bd24c1e in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x2c7 (0x15009bd1f667 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x15009bd1f962 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x15009bd209b1 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15009bcd4d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15009bcd4d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x15009bcd4d51 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x150043c87239 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank11]: frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, c10::Device&, c10d::OpType, int, bool) + 0xc50 (0x150043c8e6c0 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank11]: frame #10: <unknown function> + 0x11b1f10 (0x150043c96f10 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank11]: frame #11: c10d::ProcessGroupNCCL::allreduce_impl(at::Tensor&, c10d::AllreduceOptions const&) + 0x10 (0x150043c98290 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank11]: frame #12: c10d::ProcessGroupNCCL::barrier(c10d::BarrierOptions const&) + 0x66a (0x150043ca6dda in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+[rank8]: frame #42: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank8]: frame #43: <unknown function> + 0x29590 (0x1537a9829590 in /lib64/libc.so.6)
+[rank8]: frame #44: __libc_start_main + 0x80 (0x1537a9829640 in /lib64/libc.so.6)
+[rank8]: frame #45: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank8]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank9]: frame #13: <unknown function> + 0x57692d2 (0x154e336da2d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #14: <unknown function> + 0x5773d00 (0x154e336e4d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #15: <unknown function> + 0x5773e05 (0x154e336e4e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #16: <unknown function> + 0x4db0e26 (0x154e32d21e26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #17: <unknown function> + 0x175be98 (0x154e2f6cce98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #18: <unknown function> + 0x577e1b4 (0x154e336ef1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #19: <unknown function> + 0x577ef65 (0x154e336eff65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank9]: frame #20: <unknown function> + 0xd236c8 (0x154e3b65f6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank9]: frame #21: <unknown function> + 0x47e1ef (0x154e3adba1ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank9]: frame #22: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank9]: frame #23: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #24: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank9]: frame #25: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #26: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank9]: frame #27: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #28: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank9]: frame #29: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #30: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #31: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank9]: frame #32: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #33: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank9]: frame #34: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #35: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #36: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank9]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank9]: frame #39: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank9]: frame #40: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #41: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #13: <unknown function> + 0x57692d2 (0x15009bcc72d2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #14: <unknown function> + 0x5773d00 (0x15009bcd1d00 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #15: <unknown function> + 0x5773e05 (0x15009bcd1e05 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #16: <unknown function> + 0x4db0e26 (0x15009b30ee26 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #17: <unknown function> + 0x175be98 (0x150097cb9e98 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #18: <unknown function> + 0x577e1b4 (0x15009bcdc1b4 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #19: <unknown function> + 0x577ef65 (0x15009bcdcf65 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+[rank11]: frame #20: <unknown function> + 0xd236c8 (0x1500a3c4c6c8 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank11]: frame #21: <unknown function> + 0x47e1ef (0x1500a33a71ef in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+[rank11]: frame #22: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x507107]
+[rank11]: frame #23: _PyObject_MakeTpCall + 0x2ec (0x4f03bc in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #24: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x505020]
+[rank11]: frame #25: _PyEval_EvalFrameDefault + 0x1237 (0x4e8867 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #26: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank11]: frame #27: _PyEval_EvalFrameDefault + 0x2f6b (0x4ea59b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #28: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank11]: frame #29: _PyFunction_Vectorcall + 0xd5 (0x4f7b25 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #30: _PyEval_EvalFrameDefault + 0x4d54 (0x4ec384 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #31: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4f7e03]
+[rank11]: frame #32: _PyEval_EvalFrameDefault + 0x3cf (0x4e79ff in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #33: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x4e672a]
+[rank11]: frame #34: _PyEval_EvalCodeWithName + 0x47 (0x4e63b7 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #35: PyEval_EvalCodeEx + 0x39 (0x4e6369 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #36: PyEval_EvalCode + 0x1b (0x59363b in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #37: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5c0ee7]
+[rank11]: frame #38: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5bcef0]
+[rank11]: frame #39: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x456252]
+[rank11]: frame #40: PyRun_SimpleFileExFlags + 0x1a2 (0x5b6bf2 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #42: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank9]: frame #43: <unknown function> + 0x29590 (0x154e51029590 in /lib64/libc.so.6)
+[rank9]: frame #44: __libc_start_main + 0x80 (0x154e51029640 in /lib64/libc.so.6)
+[rank9]: frame #45: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank9]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+[rank11]: frame #41: Py_RunMain + 0x37e (0x5b40ee in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #42: Py_BytesMain + 0x39 (0x5876f9 in /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python)
+[rank11]: frame #43: <unknown function> + 0x29590 (0x1500b9629590 in /lib64/libc.so.6)
+[rank11]: frame #44: __libc_start_main + 0x80 (0x1500b9629640 in /lib64/libc.so.6)
+[rank11]: frame #45: /home/hk-project-p0022560/tum_fmp0582/anaconda3/envs/myenv1/bin/python() [0x5875ae]
+[rank11]: . This may indicate a possible application crash on rank 0 or a network set up issue.
+srun: error: hkn0436: tasks 6-7: Exited with exit code 1
+srun: error: hkn0428: tasks 0-1: Exited with exit code 1
+srun: error: hkn0627: task 8: Exited with exit code 1
+srun: error: hkn0436: tasks 4-5: Exited with exit code 1
+srun: error: hkn0428: task 3: Exited with exit code 1
+srun: error: hkn0627: tasks 9,11: Exited with exit code 1
