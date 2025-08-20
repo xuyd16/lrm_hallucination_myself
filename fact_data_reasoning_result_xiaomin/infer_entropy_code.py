@@ -110,6 +110,18 @@ def analyze(jsonl_path, model_name, cot_type = 'extensive', output_csv=None, use
     with open(model_name + "_outputs.json", "w", encoding="utf-8") as f:
         json.dump(process_results, f, ensure_ascii=False, indent=2)
 
-jsonl_path = '/hkfs/home/project/hk-project-p0022560/tum_fmp0582/hallucination/fact_data_reasoning_result_xiaomin/Qwen2.5-1.5B-Instruct/Qwen2.5-1.5B-Instruct-All.jsonl'
-model_name = 'Qwen/Qwen2.5-1.5B-Instruct'
+# jsonl_path = '/hkfs/home/project/hk-project-p0022560/tum_fmp0582/hallucination/fact_data_reasoning_result_xiaomin/Qwen2.5-1.5B-Instruct/Qwen2.5-1.5B-Instruct-All.jsonl'
+# model_name = 'Qwen/Qwen2.5-1.5B-Instruct'
+# results = analyze(jsonl_path, model_name,  output_csv=None, use_cuda=True)
+
+
+jsonl_path = '/hkfs/home/project/hk-project-p0022560/tum_fmp0582/hallucination/fact_data_reasoning_result_xiaomin/Llama-3.2-1B-Instruct/Llama-3.2-1B-Instruct-All.jsonl'
+model_name = "meta-llama/Llama-3.2-1B"
 results = analyze(jsonl_path, model_name,  output_csv=None, use_cuda=True)
+
+
+
+
+'''
+plot image
+'''
